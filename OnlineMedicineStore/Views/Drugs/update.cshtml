@@ -1,0 +1,103 @@
+﻿
+@model OnlineMedicineStore.ViewModel.StoreDrugViewModel
+
+@{
+    ViewData["Title"] = "CreateByStore";
+}
+<div>
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Drugs item in Model.Drugs)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        <a asp-controller="Drugs" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a asp-controller="Drugs" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger m-1">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+@*<div>
+    <h4> Store</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Store.Name);
+        </dd>
+    </dl>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Drug</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Drugs item in Model.Drugs)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>*@
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateByStore">
+            <div asp-validation-summary="ModelOnly"></div>
+            <input type="hidden" asp-for="StoreId" value="@Model.Store.Id" />
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

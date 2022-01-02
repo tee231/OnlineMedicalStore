@@ -1,0 +1,70 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OnlineMedicineStore</title>
+
+  
+
+    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/b19cd70c56.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+       
+        <div class="container">
+            <div class="navbar-header">
+               
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">OnlineMedicineStore</a>
+            </div>
+            <div class=" collapse navbar-collapse" id="collapsibleNavbar">
+                <div class="toolbar_right">
+                    <ul class="nav navbar">
+
+                        @*<li class="col-1"><a asp-area="" asp-controller="Identity" asp-action="Index">Home </a> </li>
+                        <li class="col-2"><a asp-area="" asp-controller="Identity" asp-action="About">About </a></li>
+                        <li class="col-3"><a asp-area="" asp-controller="Identity" asp-action="Contact">Contact </a>*@
+
+
+
+                        <li class="navbar-header center">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                if (User.IsInRole("Admin"))
+                                {
+
+                                    <a asp-area="" asp-controller="StoreOwner" asp-action="Index">Admin Page</a>
+
+                                }
+                            }
+
+                        </li>
+
+                    </ul>
+                </div>
+                @await Html.PartialAsync("_LoginPartial")
+
+            </div>
+        </div>
+
+    </nav>
+
+    <partial name="_CookieConsentPartial" />
+    <div> @RenderBody()</div>
+    <div class="container body-content">
+       
+        <hr />
+        <footer>
+            <p>&copy; 2019 - OnlineMedicineStore</p>
+        </footer>
+    </div>
+
+    <!------ Include the above in your HEAD tag ---------->
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

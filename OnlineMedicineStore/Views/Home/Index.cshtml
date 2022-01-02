@@ -1,0 +1,1020 @@
+﻿<!-- Mirrored from themeim.com/demo/gymer/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Jun 2019 10:44:39 GMT -->
+<head>
+    <!-- Meta Data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MEDISTORE</title>
+
+    <!-- Fav Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="~/assets/img/fav-icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/assets/img/fav-icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/assets/img/fav-icons/favicon-16x16.png">
+
+    <!-- Dependency Styles -->
+    <link rel="stylesheet" href="~/dependencies/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/dependencies/fontawesome/css/fontawesome-all.min.css" type="text/css">
+    <link rel="stylesheet" href="~/dependencies/flaticon/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="~/dependencies/owl.carousel/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/dependencies/owl.carousel/css/owl.theme.default.min.css" type="text/css">
+    <link rel="stylesheet" href="~/dependencies/magnific-popup/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="~/dependencies/animate.css/css/animate.css" type="text/css">
+    <link rel="stylesheet" href="~/dependencies/slick-carousel/css/slick.css" type="text/css">
+    <link rel="stylesheet" href="~/dependencies/slick-carousel/css/slick-theme.css" type="text/css">
+    <link rel="stylesheet" href="~/dependencies/material-design-icons/css/material-icons.css">
+    <link rel="stylesheet" href="~/dependencies/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="~/dependencies/aos/css/aos.css">
+    <link rel="stylesheet" href="~/dependencies/rangeslider.js/css/rangeslider.css">
+
+    <!-- Site Stylesheet -->
+    <link rel="stylesheet" href="~/assets/css/app.css" type="text/css">
+
+    <link id="theme" rel="stylesheet" href="~/assets/css/theme-color/theme-default.css" type="text/css">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%7CRoboto:300,400,500,700,900" rel="stylesheet">
+
+
+</head>
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<div id="site">
+
+
+    <!--=========================-->
+    <!--=        Navbar         =-->
+    <!--=========================-->
+    <header id="head" class="header_area hdr_area_two hdr_area_three">
+        <!-- Start top toolbar -->
+        <section class="top_toolbar top_toolbar_new">
+            <div class="">
+                <div class="row">
+                    <div class="col-xl-9 offset-xl-3">
+                        <div class="toolbar_left">
+
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 col-lg-12">
+
+                        <div class="toolbar_right">
+                            <ul>
+                                <li>
+                                    @await Html.PartialAsync("_LoginPartial")
+                                </li>
+                                <li>
+                                    <input type="text" placeholder="search" id="Siri" />
+                                    <input type="button" id="idd" onclick="Run()" value="search" />
+                                    @*<button asp-controller="Home" asp-for="Index" onclick="Run()">Search</button>*@
+                                    @*<i class="fas fa-search"></i>*@
+                                </li>
+                                <li class="cart">
+                                    <i class="fas fa-shopping-basket"></i>
+                                    <div class="cart_detail">
+                                        <div class="single_cart">
+                                            <div class="cart_left">
+                                                <img src="~/media/images/banner-two/cart-one.png" alt="">
+                                            </div>
+                                            <div class="cart_right">
+                                                <h3>Vaxin Regular Big Name</h3>
+                                                <p>$66 <sup>USD</sup></p>
+                                            </div>
+                                        </div>
+                                        <div class="single_cart">
+                                            <div class="cart_left">
+                                                <img src="~/media/images/banner-two/cart-two.png" alt="">
+                                            </div>
+                                            <div class="cart_right">
+                                                <h3>Vaxin Woman</h3>
+                                                <p>$76 <sup>USD</sup></p>
+                                            </div>
+                                        </div>
+                                        <div class="cart_more">
+                                            <a href="#">View Cart <i class="fa fa-angle-right"></i></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="phone">
+                                    <a href="#">
+                                        <i class="fas fa-phone"></i>
+                                        Call +123 4567890
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a>
+                            <img src="~/media/images/home3/logo.jpg" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mobile-nav-wrap" class="clearfix">
+            <div class="mobile_toolbar">
+                <div class="vigo_container_one">
+                    <div class="top_toolbar_right">
+                        <div class="phone_number">
+                            <span class="flaticon-phone-call"></span> <a href="#">+1 (895) 852–6523</a>
+                        </div>
+                        <div class="header_login">
+                            <div class="whc_toolbar_main_login">
+                                <a href="sign-up.html">register</a>|
+                                <a href="sign-in-2.html">login</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="vigo_container_one">
+                <div class="bottom_nav bottom_nav_two">
+                    <div id="mobile-logo">
+                        <a href="index-2.html">
+                            <img src="~/assets/img/hm-two-logo.png" class="svg" alt="">
+                        </a>
+                    </div>
+                    <div class="toggle-inner">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Mobile Menu outer-->
+    </header>
+
+    <section class="mobile-menu-inner mobile-menu-inner-two mobile-menu-inner-four">
+        <div class="mobile_accor_togo">
+            <div class="mobile_accor_logo">
+                <a href="index-2.html">
+                    <img src="~/assets/img/hm-two-logo.png" class="svg" alt="">
+                </a>
+            </div>
+            <div class="close-menu">
+                <span></span>
+            </div>
+        </div>
+        <nav id="accordian">
+            <ul class="accordion-menu">
+                <li class="current_page_item">
+                    <a href="index-2.html" class="dropdownlink">Home</a>
+                    <ul class="submenuItems">
+                        <li><i class="flaticon-right-arrow-angle"></i><a href="index-2.html">Home One</a></li>
+                        <li><i class="flaticon-right-arrow-angle"></i><a href="index2.html">Home Two</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="supplement.html">Supplement</a>
+                </li>
+                <li>
+                    <a href="feature.html">Feature</a>
+                </li>
+                <li>
+                    <a href="collection.html" class="dropdownlink">Productlist</a>
+                    <ul class="submenuItems">
+                        <li><i class="flaticon-right-arrow-angle"></i><a href="collection.html">Productlist</a></li>
+                        <li><i class="flaticon-right-arrow-angle"></i><a href="collection-all.html">Product Sidebar</a></li>
+                        <li><i class="flaticon-right-arrow-angle"></i><a href="product-detail.html">Product Detail</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="ingredient.html">Ingredient</a>
+                </li>
+                <li>
+                    <a href="blog.html" class="dropdownlink">blog</a>
+                    <ul class="submenuItems">
+                        <li><i class="flaticon-right-arrow-angle"></i><a href="blog.html"> Blog</a></li>
+                        <li><i class="flaticon-right-arrow-angle"></i><a href="blog-details.html"> Blog details</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="contact.html" class="dropdownlink">Contact</a>
+                    <ul class="submenuItems">
+                        <li><i class="flaticon-right-arrow-angle"></i><a href="contact.html">Contact page</a></li>
+                        <li><i class="flaticon-right-arrow-angle"></i><a href="about.html">About us</a></li>
+                        <li><i class="flaticon-right-arrow-angle"></i><a href="privacy.html">Privacy</a></li>
+                        <li><i class="flaticon-right-arrow-angle"></i><a href="reset-pass.html">Reset Pass</a></li>
+                        <li><i class="flaticon-right-arrow-angle"></i><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <form action="" id="moble-search">
+            <input type="text" placeholder="Search....">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <ul class="footer-social-link">
+            <li class="fb-bg"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="in-bg"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li class="tw-bg"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="gp-bg"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+        </ul>
+    </section>
+
+    <!--==========================-->
+    <!--=        Content         =-->
+    <!--==========================-->
+    <!--==========================-->
+    <!--=        Banner         =-->
+    <!--==========================-->
+    <section id="banner" class="banner_area home5_banner">
+        <div class="banner_slider owl-carousel">
+            <div class="sn_bnr_slide">
+                <div class="vigo_container_two">
+                    <div class="row">
+                        <div class="order-2 col-sm-8 offset-sm-2 order-sm-2 col-md-6 offset-md-0 order-md-1">
+                            <div class="banner_left">
+                                <div class="banner_left_cell">
+                                    <h2 class="animated fadeInDown">NEAREST DRUG <span>STORE</span></h2>
+                                    <p>This site helps find the store close to your particular location that has the particular Medicine you want you just have to click on the search button .</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-1 col-sm-8 offset-sm-2 order-sm-1 col-md-6 offset-md-0 order-md-2">
+                            <div class="banner_right animated fadeInRight">
+                                <div class="banner_right_cell">
+                                    <img src="~/media/images/home3/Got.jpg" alt="ii">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sn_bnr_slide">
+                <div class="vigo_container_two">
+                    <div class="row">
+                        <div class="order-1 col-sm-8 offset-sm-2 order-sm-1 col-md-6 offset-md-0 order-md-1">
+                            <div class="banner_right animated fadeInRight">
+                                <div class="banner_right_cell">
+                                    <img src="~/media/images/home3/banner-right.png" alt="ii">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-2 col-sm-8 offset-sm-2 order-sm-2 col-md-6 offset-md-0 order-md-2">
+                            <div class="banner_left">
+                                <div class="banner_left_cell">
+                                    <h1 class="animated fadeInDown">Super Convenient <span>ORGANIC SUPPLEMENT</span></h1>
+                                    <p>This is a handy form of protein on days when you need a little extra! No synthetic coating & safe for all young adults.</p>
+                                    <div class="slr_btn_wrapper animated">
+                                        <a href="#" class="btn_two active">Purchase</a>
+                                        <a href="#" class="btn_two">More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sn_bnr_slide">
+                <div class="vigo_container_two">
+                    <div class="row">
+                        <div class="order-2 col-sm-8 offset-sm-2 order-sm-2 col-md-6 offset-md-0 order-md-2">
+                            <div class="banner_left">
+                                <div class="banner_left_cell">
+                                    <h1 class="animated fadeInDown">Super Convenient <span>ORGANIC SUPPLEMENT</span></h1>
+                                    <p>This is a handy form of protein on days when you need a little extra! No synthetic coating & safe for all young adults.</p>
+                                    <div class="slr_btn_wrapper animated">
+                                        <a href="#" class="btn_two active">Purchase</a>
+                                        <a href="#" class="btn_two">More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-1 col-sm-8 offset-sm-2 order-sm-1 col-md-6 offset-md-0 order-md-1">
+                            <div class="banner_right animated fadeInRight">
+                                <div class="banner_right_cell">
+                                    <img src="~/media/images/home3/banner-right.png" alt="ii">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @model IEnumerable<OnlineMedicineStore.Models.Drugs>
+    @{
+        ViewData["Title"] = "Home Page";
+    }
+
+    <section>
+        <div class="card-deck" id="loop" align="center">
+            @foreach (var items in Model.Take(6))
+            {
+              
+                var photopath = "~/images/" + (items.Photopath ?? "noimage.jpg");
+                <div class="col-xl-2 col-sm-10 col-lg-3">
+                    <div class="sn_related_product">
+                        <div class="sn_pd_img">
+                            <a href="#">
+
+                                <img class="card-img-top image thumbnail" src="@photopath" width="300" height="300" asp-append-version="true" />
+                                @*<img src="media/images/banner-two/related-pd-one.png" alt="">*@
+                            </a>
+                        </div>
+                        <div class="sn_pd_rating">
+                            <a href="#">
+                                <i class="far fa-star"></i>
+                            </a>
+                            <a href="#">
+                                <i class="far fa-star"></i>
+                            </a>
+                            <a href="#">
+                                <i class="far fa-star"></i>
+                            </a>
+                            <a href="#">
+                                <i class="far fa-star"></i>
+                            </a>
+                            <a href="#">
+                                <i class="far fa-star"></i>
+                            </a>
+                        </div>
+                        <div class="sn_pd_detail">
+                            <h5>
+                                <a>@items.Name</a>
+                            </h5>
+                            <h6>
+                                <a>@items.Stores.Name</a>
+                            </h6>
+                            <h5>
+                                <a>@items.Stores.states</a>
+                            </h5>
+                            <h5>
+                                <a>@items.Description</a>
+                            </h5>
+
+                            <del>
+                                <span>$20.00</span>
+                            </del>
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <article class="combine_area_two" data-bg-image="media/images/home3/slider-bottom-bg-left.png" data-parallax="image">
+        <section class="supplement_benefit">
+            <div class="vigo_container_two">
+                <div class="supplement_benefit_all_items">
+                    <div class="supplement_benefit_item">
+                        <div class="supplement_benefit_inner">
+                            <img src="~/media/images/home3/one.jpg" alt="">
+                            <p>Supplies 10 Vitamins & 8 Minerals</p>
+                            <div class="after">
+                                <i class="fas fa-leaf"></i>
+                                <p>Supplies 10 Vitamins & 8 Minerals</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="supplement_benefit_item">
+                        <div class="supplement_benefit_inner">
+                            <img src="~/media/images/home3/two.jpg" alt="">
+                            <p>Contains Standard Concentrate</p>
+                            <div class="after">
+                                <i class="fas fa-flask"></i>
+                                <p>Contains Standard Concentrate</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="supplement_benefit_item">
+                        <div class="supplement_benefit_inner">
+                            <img src="~/media/images/home3/three.jpg" alt="">
+                            <p>No Artificial Additive Used</p>
+                            <div class="after">
+                                <i class="fas fa-vial"></i>
+                                <p>No Artificial Additive Used</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="supplement_benefit_item">
+                        <div class="supplement_benefit_inner">
+                            <img src="~/media/images/home3/four.jpg" alt="">
+                            <p>Materials & Valuable Food Factors</p>
+                            <div class="after">
+                                <i class="fas fa-vial"></i>
+                                <p>No Artificial Additive Used</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="supplement_select_area">
+            <div class="vigo_container_two">
+                <div class="row no-gutters supplement_select_content">
+                    <div class="col-xl-9 offset-xl-3">
+                        <div class="supplement_select_item">
+                            <div class="supplement_select_item_detail">
+                                <div class="section_title_three">
+                                    <h2>ABOUT DRUG STORE?</h2>
+                                    <p>
+                                        Drugstore Nigeria is Nigeria’s largest online pharmacy store where you can buy medicine.
+
+                                        Buy drugs, medical and hospital equipment from registered pharmacies in Nigeria and get it delivered to you.
+
+                                        Drugstore Nigeria enables easier and faster access to drugs.
+                                    </p>
+                                </div>
+                                <form action="#" class="product-cart" method="post">
+                                    <div class="product-quantity quantity">
+
+                                    </div>
+                                </form>
+
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class="supplement_select_item_product">
+                                <img src="~/media/images/home3/which-suit-bottle.png" alt="rr">
+                            </div>
+                            <div class="supplement_select_item_bg">
+                                <img src="~/media/images/home3/which-suit-pattern.png" alt="ds">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="supplement_at_a_glance section_padding_two">
+            <div class="vigo_container_two">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="supplement_at_item">
+                            <div class="supplement_at_item_img">
+                                <img src="~/media/images/home3/ten.jpeg" alt="">
+                            </div>
+                            <div class="supplement_at_item_content">
+                                <h3>Natural Suppliment Treatment</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                                <a href="#">
+                                    <i class="fas fa-chevron-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="supplement_at_item">
+                            <div class="supplement_at_item_img">
+                                <img src="~/media/images/home3/nine.jpeg" alt="">
+                            </div>
+                            <div class="supplement_at_item_content">
+                                <h3>Essential Amino Acid</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                                <a href="#">
+                                    <i class="fas fa-chevron-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="supplement_at_item">
+                            <div class="supplement_at_item_img">
+                                <img src="~/media/images/home3/five.png" alt="">
+                            </div>
+                            <div class="supplement_at_item_content">
+                                <h3>All in One Nutritions</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                                <a href="#">
+                                    <i class="fas fa-chevron-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="supplement_at_item">
+                            <div class="supplement_at_item_img">
+                                <img src="~/media/images/home3/twelve.jpeg" alt="">
+                            </div>
+                            <div class="supplement_at_item_content">
+                                <h3>Another Suppliment</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                                <a href="#">
+                                    <i class="fas fa-chevron-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <!--==========================-->
+    <!--=        Video         =-->
+    <!--==========================-->
+    <section class="video_three_area video5">
+        <div class="video_three_area_bg" data-bg-image="media/images/banner-two/video-three-bg.png">
+            <div class="vigo_container_two">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1">
+                        <div class="section_title_two">
+                            <h2>CERTIFICATION</h2>
+                            <p>
+                                Our product is fully personalized and well balanced for all age of customers or adults. We maintain the standards by lorem ipsum and certified by dolor set amet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="video_three_content">
+                    <a href="https://www.youtube.com/watch?v=b-TGpa0SDXw" class="video-btn pop-up" data-effect="mfp-move-horizontal">
+                        <span class="vido_three_inner">
+                            <span class="video_three_play">
+                                <i class="fas fa-play-circle"></i>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="video_bg_left">
+            <img src="~/media/images/home3/video-left.png" alt="ii">
+        </div>
+        <div class="video_bg_right">
+            <img src="~/media/images/home3/video-right.png" alt="ii">
+        </div>
+    </section>
+
+    <!--==========================-->
+    <!--=        Banner         =-->
+    <!--==========================-->
+
+    <section class="call_to_action3">
+        <div class="vigo_container_two">
+            <div class="call_to_action_area_two">
+                <div class="row">
+                    <div class="col-xl-10 offset-xl-2">
+                        <div class="call_to_action_hello">
+                            <div class="call_to_action_left_two">
+                                <h2>LIVE HEALTHY?</h2>
+                                <p>Try out our suppliment & enjoy the healthiest life. Discounts end soon!</p>
+                            </div>
+                            <div class="call_to_action_right_two">
+                                <a href="#" class="btn_two">Purchase</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="faq3_area section_padding_two">
+        <div class="vigo_container_two">
+            <div class="faq3_left_area">
+                <div class="section_title_three">
+                    <h2>Frequently asked question</h2>
+                </div>
+                <div id="accordion" class="faq3_accordion">
+                    <div class="ask_ans">
+                        <div class="question" id="headingOne">
+                            <span class="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" role="button">
+                                What is organic suppliment?
+                            </span>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="ans_body">
+                                !!!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ask_ans">
+                        <div class="question" id="headingTwo">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" role="button">
+                                Why would I use it?
+                            </span>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="ans_body">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ask_ans">
+                        <div class="question" id="headingThree">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" role="button">
+                                Is the any alargic reaction using this product?
+                            </span>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="ans_body">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ask_ans">
+                        <div class="question" id="headingFour">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" role="button">
+                                Is this safe for people who are over 50 years old?
+                            </span>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="ans_body">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="Blog_home_five section_padding_two clearfix">
+        <div class="vigo_container_two clearfix">
+            <div class="Blog_home_five_slider_part">
+                <div class="blog_hm_five_slider owl-carousel">
+                    <div class="blog_hm_five_post">
+                        <div class="blog_hm_five_thumb">
+                            <img src="~/media/images/home3/First%20aid.jpg" alt="ff">
+                        </div>
+                        <div class="blog_hm_five_title">
+                            <h4>
+                                <a href="blog-details.html">
+                                    Is this safe for people who are over 50 years old?
+                                    What next you can think of next generation suppliments?
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="blog_hm_five_meta">
+                            <a href="#">
+                                5 minutes read
+                                <i class="fas fa-chevron-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog_hm_five_post">
+                        <div class="blog_hm_five_thumb">
+                            <img src="~/media/images/home3/bing.jpg" alt="ff">
+                        </div>
+                        <div class="blog_hm_five_title">
+                            <h4>
+                                <a href="blog-details.html">
+                                    Is this safe for people who are over 50 years old?
+                                    What next you can think of next generation suppliments?
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="blog_hm_five_meta">
+                            <a href="#">
+                                5 minutes read
+                                <i class="fas fa-chevron-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog_hm_five_post">
+                        <div class="blog_hm_five_thumb">
+                            <img src="~/media/images/home3/deng.jpg" alt="ff">
+                        </div>
+                        <div class="blog_hm_five_title">
+                            <h4>
+                                <a href="blog-details.html">
+                                    Is this safe for people who are over 50 years old?
+                                    What next you can think of next generation suppliments?
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="blog_hm_five_meta">
+                            <a href="#">
+                                5 minutes read
+                                <i class="fas fa-chevron-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Blog_home_five_btn_part">
+                <a href="#">
+                    visit blog
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!--==========================-->
+    <!--=        Banner         =-->
+    <!--==========================-->
+    <div class="map_hovarable">
+        <div class="map_click_me">
+            <p>click me</p>
+            <i class="fas fa-angle-down"></i>
+        </div>
+        <div class="map" data-lat="40.730260" data-lng="-74.040315" data-mrkr="~/assets/img/marker.html"></div>
+    </div>
+
+    <!--==========================-->
+    <!--=        Count Up         =-->
+    <!--==========================-->
+    <section class="count_up">
+        <div class="vigo_container_two">
+            <div class="row" id="pick-three">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_count_up">
+                        <div class="single_count_inner">
+                            <div class="countup_icon">
+                                <i class="fas fa-prescription-bottle"></i>
+                            </div>
+                            <div class="countup_desc">
+                                <div class="counter" data-count="5772">0</div>
+                                <span>BOTTLES SOLD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_count_up">
+                        <div class="single_count_inner">
+                            <div class="countup_icon">
+                                <i class="fas fa-smile"></i>
+                            </div>
+                            <div class="countup_desc">
+                                <div class="counter" data-count="1246">0</div>
+                                <span>HAPPY CUSTOMERS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_count_up">
+                        <div class="single_count_inner">
+                            <div class="countup_icon">
+                                <i class="fas fa-coffee"></i>
+                            </div>
+                            <div class="countup_desc">
+                                <div class="counter" data-count="2510">0</div>
+                                <span>CUPS OF COFFEE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==========================-->
+    <!--=        Footer         =-->
+    <!--==========================-->
+    <footer class="footer_four_area">
+        <div class="vigo_container_two">
+            <div class="footer_four_top clearfix">
+                <div class="footer_four_left">
+                    <a href="#" class="logo">
+                       
+                       
+                    </a>
+                </div>
+                <div class="footer_four_right">
+                    <p>SHARING IS CARING -</p>
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-medium-m"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-tumblr"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer_four_bottom clearfix">
+                <div class="footer_four_bottom_left">
+                  
+                </div>
+                <div class="footer_four_bottom_right">
+                    <ul>
+                        <li>
+                            <a href="#">Career</a>
+                        </li>
+                        <li>
+                            <a href="#">Sitemap</a>
+                        </li>
+                        <li>
+                            <a href="#">Help Center</a>
+                        </li>
+                    </ul>
+                    <!-- back to top -->
+                    <div class="backtotop backtotop_three">
+                        <i class="fas fa-angle-double-up"></i>
+                    </div>
+                    <!-- back to top -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sign in -->
+    <div class="modal fade" id="signUpModal">
+        <div class="modal-dialog">
+            <div class="modal-body">
+                <div id="signup">
+                    <div class="login-left">
+                        <div class="login-title">
+                            <h3>Sign in socially</h3>
+                        </div>
+                        <div class="login-social">
+                            <ul>
+                                <li class="facebook">
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                        <span>Facebook</span>
+                                    </a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                        <span>Twitter</span>
+                                    </a>
+                                </li>
+                                <li class="pinterest">
+                                    <a href="#">
+                                        <i class="fab fa-pinterest-p"></i>
+                                        <span>Pinterest</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="login-right">
+                        <div class="login-title">
+                            <h3>Sign Up through VIGO</h3>
+                        </div>
+                        <div class="login_main_form">
+                            <form action="#">
+                                <input type="text" placeholder="Username">
+                                <input type="text" placeholder="Email">
+                                <input type="text" placeholder="Password">
+                                <input type="text" placeholder="Confirm Password">
+                                <div class="select_wrapper">
+                                    <select>
+                                        <option value="Country">Country</option>
+                                        <option value="England">England</option>
+                                        <option value="America">America</option>
+                                        <option value="India">India</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Bangladesh">Bangladesh</option>
+                                    </select>
+                                </div>
+                                <label>
+                                    <input type="checkbox" name="vehicle" value="Bike">
+                                    I'm over 18 and I agree<span> Terms & Conditions!</span>
+                                </label>
+                                <input type="submit" value="sign in">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign in -->
+    <!-- sign up -->
+    @*<div class="modal fade" id="signInModal">
+        <div class="modal-dialog">
+            <div class="modal-body">
+                <div id="signup2">
+                    <div class="login-left">
+                        <div class="login-title">
+                            <h3>Sign in socially</h3>
+                        </div>
+                        <div class="login-social">
+                            <ul>
+                                <li class="facebook">
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                        <span>Facebook</span>
+                                    </a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="#">
+                                        <i class="fab fa-twitter"></i>
+                                        <span>Twitter</span>
+                                    </a>
+                                </li>
+                                <li class="pinterest">
+                                    <a href="#">
+                                        <i class="fab fa-pinterest-p"></i>
+                                        <span>Pinterest</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="login-right">
+                        <div class="login-title">
+                            <h3>Sign in through Vigo</h3>
+                        </div>
+                        <div class="login_main_form">
+                            <form action="#">
+                                <input type="text" placeholder="Email or Username">
+                                <input type="text" placeholder="Password">
+                                <label>
+                                    <input type="checkbox" name="vehicle" value="Bike">
+                                    Remember me
+                                    <span>Forgot your password</span>
+                                </label>
+                                <input type="submit" value="sign in">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+
+</div>
+<!-- /#site -->
+<!-- Dependency Scripts -->
+<script src="~/dependencies/jquery/jquery.min.js"></script>
+<script src="~/dependencies/popper.js/popper.min.js"></script>
+<script src="~/dependencies/bootstrap/js/bootstrap.min.js"></script>
+<script src="~/dependencies/owl.carousel/js/owl.carousel.min.js"></script>
+<script src="~/dependencies/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+<script src="~/dependencies/isotope-layout/js/isotope.pkgd.min.js"></script>
+<script src="~/dependencies/slick-carousel/js/slick.min.js"></script>
+<script src="~/dependencies/jquery.countdown/js/jquery.countdown.min.js"></script>
+<script src="~/dependencies/gmap3/gmap3.min.js"></script>
+<script src="~/dependencies/headroom/js/headroom.js"></script>
+<script src="~/dependencies/countUp.js/js/countUp.min.js"></script>
+<script src="~/dependencies/twitter-fetcher/js/twitterFetcher_min.js"></script>
+<script src="~/dependencies/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script src="~/dependencies/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="~/dependencies/aos/js/aos.js"></script>
+<script async src="../../../platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="../../../cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsBrMPsyNtpwKXPPpG54XwJXnyobfMAIc"></script>
+<script src="~/dependencies/rangeslider.js/js/rangeslider.min.js"></script>
+<script src="~/dependencies/waypoints/js/jquery.waypoints.min.js"></script>
+<!-- Site Scripts -->
+<script src="~/assets/js/middle.js"></script>
+<script src="~/assets/js/app.js"></script>
+
+
+
+
+<!-- Mirrored from themeim.com/demo/gymer/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 10 Jun 2019 10:44:54 GMT -->
+
+
+
+<script>
+
+    //$(function () {
+
+    //    $('#idd').click(function () {
+    //        //var x = document.getElementById("Siri").value;
+    //        //window.location = '/Home/Index?search=' + x;
+    //        $('html,body').animate({
+    //            scrollTop: $('#loop').offset().top
+    //        },
+    //            'slow'
+    //        );
+
+    //    });
+    //});
+
+    //$(window).load(function () {
+    //    alert("kfy")
+    $(document).ready(function () {
+
+        if (check()) {
+            $('html,body').animate({
+                scrollTop: $('#loop').offset().top
+            },
+                'slow'
+            );
+        }
+    });
+
+    function Run() {
+        var x = document.getElementById("Siri").value;
+        console.log(x);
+        window.location = '/Home/Index?search=' + x;
+    }
+    function check() {
+        var x = window.location.search.match("search");
+        return x;
+
+
+    }
+    </script>
+

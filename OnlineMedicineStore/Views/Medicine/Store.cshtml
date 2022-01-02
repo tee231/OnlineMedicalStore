@@ -1,0 +1,90 @@
+﻿@model IEnumerable<OnlineMedicineStore.Models.Stores>
+@{
+    ViewData["Title"] = "Store";
+}
+
+<h2>Store</h2>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<form>
+    <p>
+        <a class="btn btn-success" onclick="location.href = '/Medicine/Create';" style="margin-bottom:10px; color: white"><i class="fa fa-plus"></i> Add Store</a>
+    </p>
+    
+    <style>
+        .thumbnail {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+            transition: 0.3s;
+            min-width: 40%;
+            border-radius: 5px;
+        }
+
+        .thumbnail-description {
+            min-height: 40px;
+        }
+
+        .thumbnail:hover {
+            cursor: pointer;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1);
+        }
+    </style>
+
+    <div class="row">
+        @foreach (var items in Model)
+        {
+            var photopath = "~/images/" + (items.Photopath ?? "noimage.jpg");
+            <div class="col-sm-3">
+                <div class="thumbnail" style="margin-bottom:30px">
+                    <div class="caption text-center">
+                        <div class="position-relative">
+                            <img src="@photopath" width="75" height="80" asp-append-version="true" />
+                        </div>
+                        <h4 id="thumbnail-label"><a href="" target="_blank">Stores</a></h4>
+                        <p><i class="fas fa-store"></i>&nbsp;&nbsp;@items.Name </p>
+                        <p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;@items.Address </p>
+                        <p><a class="" href="@Url.Action("CreateByStore","Drugs",new { id=items.Id})">ADD DRUGS</a></p>
+                       
+                    </div>
+                    <div class="caption  text-center">
+                        <span onclick="Edit(@items.Id)" class="btn btn-primary" style="margin-bottom:10px"><i class="far fa-edit"></i></span>
+                        <div class="modal fade" id="myMode" role="dialog" data-url="@Url.Action("Edit","Medicine", new { id = items.Id})"></div>
+                        <a class="btn btn-danger" onclick="Delete(@items.Id)" style="margin-bottom:10px"><i class="fas fa-trash"></i></a>
+                        @*<a class="btn btn-success" href="@Url.Action("CreateByStore","Drugs",new { id=items.Id})" style="margin-bottom:10px; color: aliceblue" onmouseover="add()"><i class="fas fa-plus"></i></a>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-offset-6"></div>
+        }
+    </div>
+    <div id="open" style="display: none"></div>
+    @*<p id="element">Add Drugs</p>*@
+
+</form>
+
+
+<script>
+    function add() {
+        $('#element').popover('show');
+    }
+    function Edit(items) {
+        var url = "/Medicine/Edit/" + items
+        $.get(url, function (data) {
+            $("#myMode").html(data);
+            $("#myMode").modal('show');
+        });
+    }
+
+    function Delete(items) {
+        debugger
+        var q = confirm("Are you sure you want to delete?");
+        if (q == true) {
+            $.ajax({
+                type: "GET",
+                url: "/Medicine/Delete/" + items,
+                success: function () {
+                    alert("success");
+                    window.location.reload();
+                }
+            });
+        }
+    }
+</script>

@@ -1,0 +1,120 @@
+﻿
+@model OnlineMedicineStore.ViewModel.StoreDrugViewModel
+
+
+@{
+    ViewData["Title"] = "CreateByStore";
+}
+<p>
+    <a class="btn btn-success" onclick="show()" style="margin-bottom:10px; color: white"><i class="fa fa-plus"></i> Add Drugs</a>
+</p>
+<div>
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Drugs item in Model.Drugs)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        <a asp-controller="Drugs" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a  class="btn btn-danger" onclick="func(@item.Id)">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+<div class="row" id="bod" style="visibility:hidden">
+    <div class="col-md-4">
+        <form enctype="multipart/form-data" asp-controller="Drugs" asp-action="CreateByStore" method="post" class="mt-3">
+            <div asp-validation-summary="All"></div>
+            <input type="hidden" asp-for="StoreId" value="@Model.Store.Id" />
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Photo" class="col-sm-2 col-form-label"></label>
+                <div class="custom-file">
+                    <input asp-for="Photo" class="form-control custom-file-input">
+                    <label class="custom-file-label">Choose File...</label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" onclick="Create()" />
+                </div>
+
+            </div>
+            @section Scripts {
+                <script>
+                    $(document).ready(function () {
+                        $('.custom-file-input').on("change", function () {
+                            var fileName = $(this).val().split("\\").pop();
+                            $(this).next('.custom-file-label').html(fileName);
+                        });
+                    });
+                </script>
+            }
+        </form>
+    </div>
+</div>
+
+
+         
+<script>
+    function show() {
+        var x = document.getElementById("bod");
+        x.style.visibility = "visible";
+    }
+    function Create() {
+        var x = document.getElementById("bod");
+        x.style.display = "none";
+    }
+    function func(item) { 
+        var q = confirm("Are you sure you want to delete?");
+        if (q == true) {
+            
+            $.ajax({
+                type: "GET",
+                url: "/Drugs/Delete/" + item,
+                success: function (data) {
+                    console.log(data);
+                    alert("success");
+                    window.location.reload();
+                }
+            });
+        } 
+    }
+</script>

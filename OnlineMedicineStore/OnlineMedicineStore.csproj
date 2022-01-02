@@ -1,0 +1,152 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\**" />
+    <Compile Remove="NewFolder\**" />
+    <Content Remove="Migrations\**" />
+    <Content Remove="NewFolder\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="Migrations\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\images\banner-bottle.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Migrations\20211118163924_Renew.cs" />
+    <Compile Include="Migrations\20211118163924_Renew.Designer.cs" />
+    <Compile Include="Migrations\ApplicationDbContextModelSnapshot.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\css\app.css" />
+    <None Include="wwwroot\assets\css\theme-color\theme-default.css" />
+    <None Include="wwwroot\assets\fonts\theme-build-icons.eot" />
+    <None Include="wwwroot\assets\fonts\theme-build-icons.svg" />
+    <None Include="wwwroot\assets\fonts\theme-build-icons.ttf" />
+    <None Include="wwwroot\assets\fonts\theme-build-icons.woff" />
+    <None Include="wwwroot\assets\fonts\theme-build-iconsd41d.eot" />
+    <None Include="wwwroot\assets\img\fav-icons\apple-touch-icon.png" />
+    <None Include="wwwroot\assets\img\fav-icons\favicon-16x16.png" />
+    <None Include="wwwroot\assets\img\fav-icons\favicon-32x32.png" />
+    <None Include="wwwroot\assets\img\footer-bg.png" />
+    <None Include="wwwroot\assets\img\hm-two-logo.png" />
+    <None Include="wwwroot\assets\img\marker.html" />
+    <None Include="wwwroot\assets\js\app.js" />
+    <None Include="wwwroot\assets\js\middle.js" />
+    <None Include="wwwroot\dependencies\animate.css\css\animate.css" />
+    <None Include="wwwroot\dependencies\aos\css\aos.css" />
+    <None Include="wwwroot\dependencies\aos\js\aos.js" />
+    <None Include="wwwroot\dependencies\bootstrap\css\bootstrap.min.css" />
+    <None Include="wwwroot\dependencies\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\dependencies\countUp.js\js\countUp.min.js" />
+    <None Include="wwwroot\dependencies\flaticon\css\flaticon.css" />
+    <None Include="wwwroot\dependencies\flaticon\webfonts\Flaticon.eot" />
+    <None Include="wwwroot\dependencies\flaticon\webfonts\Flaticon.svg" />
+    <None Include="wwwroot\dependencies\flaticon\webfonts\Flaticon.ttf" />
+    <None Include="wwwroot\dependencies\flaticon\webfonts\Flaticon.woff" />
+    <None Include="wwwroot\dependencies\flaticon\webfonts\Flaticond41d.eot" />
+    <None Include="wwwroot\dependencies\fontawesome\css\fontawesome-all.min.css" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-brands-400.eot" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-brands-400.ttf" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-brands-400.woff" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-brands-400d41d.eot" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-regular-400.eot" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-regular-400.ttf" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-regular-400.woff" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-regular-400d41d.eot" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-solid-900.eot" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-solid-900.ttf" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-solid-900.woff" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\dependencies\fontawesome\webfonts\fa-solid-900d41d.eot" />
+    <None Include="wwwroot\dependencies\gmap3\gmap3.min.js" />
+    <None Include="wwwroot\dependencies\headroom\js\headroom.js" />
+    <None Include="wwwroot\dependencies\isotope-layout\js\isotope.pkgd.min.js" />
+    <None Include="wwwroot\dependencies\jquery.countdown\js\jquery.countdown.min.js" />
+    <None Include="wwwroot\dependencies\jquery\jquery.min.js" />
+    <None Include="wwwroot\dependencies\magnific-popup\js\jquery.magnific-popup.min.js" />
+    <None Include="wwwroot\dependencies\magnific-popup\magnific-popup.css" />
+    <None Include="wwwroot\dependencies\material-design-icons\css\material-icons.css" />
+    <None Include="wwwroot\dependencies\material-design-icons\webfont\MaterialIcons-Regular.eot" />
+    <None Include="wwwroot\dependencies\material-design-icons\webfont\MaterialIcons-Regular.ttf" />
+    <None Include="wwwroot\dependencies\material-design-icons\webfont\MaterialIcons-Regular.woff" />
+    <None Include="wwwroot\dependencies\material-design-icons\webfont\MaterialIcons-Regular.woff2" />
+    <None Include="wwwroot\dependencies\owl.carousel\css\owl.carousel.min.css" />
+    <None Include="wwwroot\dependencies\owl.carousel\css\owl.theme.default.min.css" />
+    <None Include="wwwroot\dependencies\owl.carousel\css\owl.video.play.html" />
+    <None Include="wwwroot\dependencies\owl.carousel\js\owl.carousel.min.js" />
+    <None Include="wwwroot\dependencies\popper.js\popper.min.js" />
+    <None Include="wwwroot\dependencies\rangeslider.js\css\rangeslider.css" />
+    <None Include="wwwroot\dependencies\rangeslider.js\js\rangeslider.min.js" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\arrowleft.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\arrowright.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\arrow_left.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\arrow_left2.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\arrow_right.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\arrow_right2.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\boxed_bgtile.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\bullet.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\bullets.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\bullets2.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\bullet_boxed.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\coloredbg.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\gridtile.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\gridtile_3x3.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\gridtile_3x3_white.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\gridtile_white.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\large_left.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\large_right.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\loader.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\navigdots.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\navigdots_bgtile.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\shadow1.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\shadow2.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\shadow3.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\small_left.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\small_left_boxed.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\small_right.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\small_right_boxed.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\assets\timer.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\css\settings.css" />
+    <None Include="wwwroot\dependencies\rs-plugin\font\revicons90c6-2.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\font\revicons90c6-3.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\font\revicons90c6-4.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\font\revicons90c6.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\images\gradient\g30.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\images\gradient\g40.html" />
+    <None Include="wwwroot\dependencies\rs-plugin\js\jquery.themepunch.revolution.min.js" />
+    <None Include="wwwroot\dependencies\rs-plugin\js\jquery.themepunch.tools.min.js" />
+    <None Include="wwwroot\dependencies\slick-carousel\css\ajax-loader.html" />
+    <None Include="wwwroot\dependencies\slick-carousel\css\fonts\slick-2.html" />
+    <None Include="wwwroot\dependencies\slick-carousel\css\fonts\slick-3.html" />
+    <None Include="wwwroot\dependencies\slick-carousel\css\fonts\slick-4.html" />
+    <None Include="wwwroot\dependencies\slick-carousel\css\fonts\slick.html" />
+    <None Include="wwwroot\dependencies\slick-carousel\css\fonts\slickd41d.html" />
+    <None Include="wwwroot\dependencies\slick-carousel\css\slick-theme.css" />
+    <None Include="wwwroot\dependencies\slick-carousel\css\slick.css" />
+    <None Include="wwwroot\dependencies\slick-carousel\js\slick.min.js" />
+    <None Include="wwwroot\dependencies\twitter-fetcher\js\twitterFetcher_min.js" />
+    <None Include="wwwroot\dependencies\waypoints\js\jquery.waypoints.min.js" />
+    <None Include="wwwroot\images\banner-bottle.png" />
+  </ItemGroup>
+
+</Project>
